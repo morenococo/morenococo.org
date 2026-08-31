@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Research · Moreno I. Coco</title>
+<meta name="description" content="Research projects and lines: attention and memory in real-world scenes, cognitive ageing and neurodegeneration, co-registration of eye movements and EEG, interpersonal coordination, and vision–language interaction.">
+<link rel="canonical" href="https://www.morenococo.org/research.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Moreno I. Coco">
+<meta property="og:title" content="Research · Moreno I. Coco">
+<meta property="og:description" content="Research projects and lines: attention and memory in real-world scenes, cognitive ageing and neurodegeneration, co-registration of eye movements and EEG, interpersonal coordination, and vision–language interaction.">
+<meta property="og:url" content="https://www.morenococo.org/research.html">
+<meta property="og:image" content="https://www.morenococo.org/assets/img/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Research · Moreno I. Coco">
+<meta name="twitter:description" content="Research projects and lines: attention and memory in real-world scenes, cognitive ageing and neurodegeneration, co-registration of eye movements and EEG, interpersonal coordination, and vision–language interaction.">
+<meta name="twitter:image" content="https://www.morenococo.org/assets/img/og-card.jpg">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.className+=" js";</script>
+<script defer data-domain="morenococo.org" src="https://plausible.io/js/script.outbound-links.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Moreno I. Coco</span>
+      <span class="brand-title">Associate Professor of Computational Cognitive Science</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="research.html" aria-current="page">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="software.html">Software</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Research</span>
+    <h1>Projects &amp; research lines</h1>
+    <p>My work sits at the intersection of cognitive neuroscience and computational modelling, using eye-tracking, EEG and machine learning to understand attention, memory and their breakdown across healthy and neurodegenerative ageing.</p>
+  </div>
+</section>
+
+<section class="section reveal clip-section">
+  <div class="wrap">
+    <h2 class="clip-head">The work, in motion</h2>
+    <p class="clip-intro">Every result below is drawn from real recorded data, not illustration. Pick one to jump to the work behind it.</p>
+    <div class="clip-strip">
+        <a class="clip-card" href="research.html#co-registration">
+          <img src="assets/img/poster-frp-parafoveal.jpg" loading="lazy" alt="">
+          <span class="clip-name">Eye movements &amp; brain activity</span>
+          <span class="clip-note">the consistency effect is parafoveal</span>
+        </a>
+        <a class="clip-card" href="research.html#attention-memory-ageing">
+          <img src="assets/img/poster-visions-consistency.jpg" loading="lazy" alt="">
+          <span class="clip-name">Attention &amp; scene meaning</span>
+          <span class="clip-note">an odd object draws the eye sooner</span>
+        </a>
+        <a class="clip-card" href="research.html#interpersonal-coordination">
+          <img src="assets/img/poster-galati-dyad-map.jpg" loading="lazy" alt="">
+          <span class="clip-name">Interpersonal coordination</span>
+          <span class="clip-note">two partners, one map, coupled gaze</span>
+        </a>
+        <a class="clip-card" href="research.html#vision-language">
+          <img src="assets/img/poster-vg-semantics.jpg" loading="lazy" alt="">
+          <span class="clip-name">Vision &amp; language</span>
+          <span class="clip-note">same meaning, same scan path</span>
+        </a>
+        <a class="clip-card" href="software.html">
+          <img src="assets/img/poster-crqa-lorenz.jpg" loading="lazy" alt="">
+          <span class="clip-name">Methods &amp; software</span>
+          <span class="clip-note">what a recurrence plot actually is</span>
+        </a>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <h2>Research lines</h2>
+
+    <div class="project has-fig" id="attention-memory-ageing">
+      <h3>Attention, memory and the semantics of real-world scenes</h3>
+      <div class="project-prose">
+      <p>How object meaning guides where we look, and how what we look at determines what we later remember. This line runs from extra-foveal semantic processing during search (Cimminella et al., 2020, <em>AP&amp;P</em>) through semantic interference in long-term visual memory (Mikhailova et al., 2021, <em>PB&amp;R</em>) to the binding of object identity and location in visual short-term memory (Allegretti &amp; Coco, 2026, <em>QJEP</em>). Each strand is run in parallel across younger adults, healthy older adults, and people with MCI or Alzheimer's disease, which is what makes the ageing contrast interpretable rather than incidental.</p>
+      <p>Underpinning much of it is the <a href="software.html">VISIONS database</a> (Allegretti, D'Innocenzo &amp; Coco, 2025, <em>Behavior Research Methods</em>): 165 indoor scenes in which the same location holds either a consistent or an inconsistent object, normed for conceptual, perceptual and attentional properties and released openly.</p>
+      </div>
+      <figure class="datafig datafig-wide">
+        <div class="frame">
+          <img src="assets/img/visions-consistency.gif" loading="lazy" alt="The same bathroom shelf shown twice side by side. On the left a hairbrush; on the right a ping-pong paddle in the same place. Two viewers' complete scan paths build up in real time as they freely explore each scene, and the viewer looking at the ping-pong paddle reaches it earlier and returns to it more. Below, two plots compare latency to first fixation and first-pass gaze duration for consistent and inconsistent objects.">
+        </div>
+        <figcaption><span class="dot">●</span> free viewing, no task at all: the same place in a scene holding an object that belongs or one that doesn't. The odd object still draws the eye sooner and holds it longer, and the dwell effect is the robust one · Allegretti, D'Innocenzo &amp; Coco (2025)</figcaption>
+      </figure>
+    </div>
+
+    <div class="project" id="ageing-neurodegeneration">
+      <h3>Cognitive ageing and neurodegeneration</h3>
+      <p>The question that runs through most of this work is not <em>how much</em> is lost, but <em>what</em> is lost and what survives. Run the same naturalistic paradigms across younger adults, healthy older adults, and people with mild cognitive impairment or Alzheimer's disease, and the picture is a fault line rather than a general decline.</p>
+      <p>A good deal turns out to be preserved. Object semantics are still processed outside foveal vision in Alzheimer's disease (Cimminella et al., 2021, <em>JGPN</em>). The temporary binding of an object's identity to its location survives healthy ageing (D'Innocenzo, Della Sala &amp; Coco, 2022, <em>Scientific Reports</em>), and visual short-term memory binding during object–scene integration is preserved in mild cognitive impairment (Allegretti, Mauti &amp; Coco, 2025, <em>Cortex</em>). What does change is more specific: semantic interference leaves a distinct eye-movement signature in MCI (Coco et al., 2021, <em>Neuropsychology</em>), and within a scene the <em>locations</em> of objects are remembered better than their identities (Coco et al., 2023, <em>Neuropsychology</em>).</p>
+      <p>Because the signatures are specific rather than global, they can be used to separate conditions that are hard to tell apart clinically: impaired semantic guidance during visual search distinguishes prodromal dementia with Lewy bodies from Alzheimer's disease (Genovese et al., 2026, <em>CogSci</em>), and to build predictive models, with deep-learning classification of MCI from eye movements and image content reaching performance comparable to the state of the art (Rocha et al., 2025). That is the practical goal: markers early enough, and specific enough, to be diagnostically useful.</p>
+    </div>
+
+    <div class="project has-fig" id="co-registration">
+      <h3>Co-registration of eye movements and electrophysiology</h3>
+      <div class="project-prose">
+      <p>Fixation-related potentials let us time-lock brain activity to each individual fixation during free viewing, rather than to an artificial trial onset. Using this approach we showed a fixation-related N400 during the semantic integration of object and scene information (Coco, Nuthmann &amp; Dimigen, 2020, <em>JoCN</em>), separating foveal from extra-foveal contributions. The method now underpins the Lewy body dementia biomarker work.</p>
+      <div class="pkg-links" style="margin-top:1rem;">
+        <a class="pill" href="walkthroughs/frp-jocn-2020.html">Walk-through of the main results</a>
+      </div>
+      </div>
+      <figure class="datafig datafig-wide">
+        <div class="frame">
+          <img src="assets/img/frp-parafoveal.gif" loading="lazy" alt="A bathroom scene shown twice, once with shampoo on the shelf and once with a frying pan in exactly the same place. On both, the same two-fixation eye movement plays: the eye first rests 8.7 degrees away, with a dashed line marking the distance to the object, then makes a saccade onto it. To the right, two fixation-related potential plots. At the pre-target fixation the consistent and inconsistent traces pull apart between 350 and 600 milliseconds and the gap between them is shaded; at the target fixation the same two traces stay together.">
+        </div>
+        <figcaption><span class="dot">●</span> the same eye movement over an object that belongs and one that doesn't. The brain has already registered the mismatch at the fixation <em>before</em> the object, while it is still 8.7° out in the parafovea, and by the time the eyes land on it the effect is gone · Coco, Nuthmann &amp; Dimigen (2020)</figcaption>
+      </figure>
+    </div>
+
+    <div class="project has-fig" id="interpersonal-coordination">
+      <h3>Interpersonal coordination and joint action</h3>
+      <div class="project-prose">
+      <p>When two people solve a task together, their eyes, speech and hands become coupled, and the strength of that coupling predicts how well they do. We have shown attentional coordination in demonstrator–observer dyads facilitates learning (Pagnotta, Laland &amp; Coco, 2020, <em>Cognition</em>), that feedback and cognitive alignment shape collaborative search (Coco, Dale &amp; Keller, 2018, <em>TopiCS</em>), and that task goals constrain how partners distribute alignment between gaze and speech (Galati, Dale, Alviar &amp; Coco, 2026, <em>JML</em>). Related work extends the approach to multiscale behavioural synchronisation in joint tower-building (Coco et al., 2016, <em>IEEE TCDS</em>) and to anticipating the intentions of humans and robots (Duarte et al., 2018, <em>IEEE RA-L</em>).</p>
+      </div>
+      <figure class="datafig datafig-wide">
+        <div class="frame">
+          <img src="assets/img/galati-dyad-map.gif" loading="lazy" alt="A Vienna subway map with the eye movements of two partners overlaid in different colours as they plan a route together, each trail fading behind the current fixation. To the right, the transcript of what they are saying scrolls in step, colour-coded by speaker. Beneath, a curve shows their gaze cross-recurrence rising and falling as the trial unfolds.">
+        </div>
+        <figcaption><span class="dot">●</span> two partners planning a route over the same map: their real fixations, the transcript of what they actually said, and gaze cross-recurrence computed in a sliding window beneath. Watch the names they speak arrive at the stations they are looking at · Galati, Dale, Alviar &amp; Coco (2026)</figcaption>
+      </figure>
+    </div>
+
+    <div class="project has-fig" id="vision-language">
+      <h3>Vision and language in situated contexts</h3>
+      <div class="project-prose">
+      <p>How speakers coordinate looking and talking when describing what is in front of them. Scan patterns predict sentence production (Coco &amp; Keller, 2012, <em>Cognitive Science</em>), and visual and linguistic saliency interact during syntactic ambiguity resolution (Coco &amp; Keller, 2015, <em>QJEP</em>). Most recently, comparing English, Portuguese and Japanese speakers, we found that the semantic similarity of two descriptions predicts the similarity of their scan patterns in all three languages, while syntactic effects stay confined to the early planning phase: evidence for a shared, prelinguistic organisation of meaning (Coco, Fernandes, Arai &amp; Keller, 2026, <em>Cognitive Science</em>).</p>
+      </div>
+      <figure class="datafig datafig-wide">
+        <div class="frame">
+          <img src="assets/img/vg-semantics.gif" loading="lazy" alt="The same bedroom scene shown twice side by side. An English and a Portuguese speaker's eye movements build up in real time. First a pair who described different things and whose scan paths diverge, then a pair who described the same thing. Beneath, a plot showing scan-path similarity rising with semantic similarity across all three language pairings.">
+        </div>
+        <figcaption><span class="dot">●</span> one scene, two speakers, two languages. When they describe the same thing, they look in the same way, and the relationship holds across every language pairing, over 468,993 pairs · real fixation positions and durations · Coco, Fernandes, Arai &amp; Keller (2026)</figcaption>
+      </figure>
+    </div>
+
+    <div class="project" id="methods">
+      <h3>Computational methods for behavioural time-series</h3>
+      <p>Much of the above needs methods that did not exist off the shelf. I develop recurrence-based tools for quantifying the coupling of two behavioural streams, released as the <a href="software.html">crqa</a> R package and documented as unidimensional and multidimensional methods (Coco et al., 2021, <em>The R-Journal</em>), alongside <a href="software.html">mousetrack</a> for action-dynamics measures. A parallel strand applies machine learning to cognitive classification, from task decoding out of eye-movement features (Coco &amp; Keller, 2014, <em>Journal of Vision</em>) to continuous profiling of bilingualism (Coco et al., 2025, <em>BLC</em>) and deep-learning models for MCI diagnosis (Rocha et al., 2025).</p>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <h2>Funded projects</h2>
+
+    <div class="project" id="attentional-curve-of-forgetting">
+      <span class="tag">PRIN 2022 · NextGenerationEU · 2022APAFFN · CUP B53D23014480001</span>
+      <h3>The Attentional Curve of Forgetting</h3>
+      <p>Forgetting is a fundamental part of our lives, but we know very little about how and why it happens. Past research has mostly neglected the critical role played by visual attention when memories are first stored. Using a novel combination of eye-tracking and advanced statistical modelling, this project explicitly links overt attention to the forgetting of naturalistic visual information. We are developing statistical models that predict individual rates of forgetting by integrating recognition performance, overt attention and intrinsic properties of the images. The project is framed within a cognitive-ageing perspective, aiming to identify which memory mechanisms change or are preserved with age, and to generate diagnostic tools for the early detection of neuropathology at the prodromal stage.</p>
+    </div>
+
+    <div class="project" id="dementia-brain-eye-activity">
+      <span class="tag">PRIN PNRR 2022 · P2022WPNKZ · Co-PI</span>
+      <h3>Identifying Biomarkers of Lewy Body Dementia in the Prodromal Stage</h3>
+      <p>A combined eye-tracking and EEG approach to distinguishing dementia subtypes before diagnosis. Recent work from this line shows that impaired semantic guidance during visual search separates prodromal dementia with Lewy bodies from Alzheimer's disease (Genovese et al., 2026, <em>CogSci</em>).</p>
+    </div>
+
+    <div class="project" id="digital-neuropsych-assessment">
+      <span class="tag">Ateneo Progetti Ricerca Grande · Sapienza · PI</span>
+      <h3>Enhancing Digital Neuropsychological Assessments</h3>
+      <p>Enhancing digital neuropsychological assessment with attentional and motor responses, using self-adaptive interactive systems.</p>
+    </div>
+
+    <div class="project" id="long-term-memory-ageing">
+      <span class="tag">POR Lisboa / FEDER · FCT · PTDC/PSI-ESP/30958/2017 · PI</span>
+      <h3>In Search of Lost Memory: Visual Memory in Healthy and Neurodegenerative Ageing</h3>
+      <p>The format of memory representations for visual information has long been central to vision science, with the role of semantic knowledge in scaffolding these representations, and how it interfaces with perceptual information from independent episodic instances, is a key debate. As we age, how these representations are formed, maintained and accessed can change significantly, making it critical to assess what mechanisms are preserved or impaired in later life, especially in people showing early signs of neurodegeneration.</p>
+      <p>Combining experimentation and computational modelling, this project showed that eye movements reveal the effects of semantic interference during the learning of naturalistic scenes (Mikhailova et al., 2021, <em>Psychonomic Bulletin &amp; Review</em>), a mechanism still present in healthy older adults and in people with MCI (Coco et al., 2021, <em>Neuropsychology</em>). We also found that semantic interference does not automatically harm memory: our ability to discriminate between similar items can in fact benefit from it (Delhaye et al., 2024, <em>Memory and Cognition</em>). Computational analyses of visual representations, from low- and high-level image features to deep neural network models, distinguished perceptual from semantic interference in similarity judgment (Mikhailova et al., 2022, <em>LNCS</em>) and recognition memory (Mikhailova et al., 2024, <em>Cognitive Processing</em>), and fed into predictive models of MCI with performance comparable to the state of the art (Rocha et al., 2025).</p>
+    </div>
+
+    <div class="project" id="leverhulme-top-down">
+      <span class="tag">Leverhulme Trust · ECF-014-205 · Early Career Fellowship</span>
+      <h3>Formation, Maintenance and Use of Top-Down Knowledge in Alzheimer Dementia</h3>
+      <p>An independent fellowship at the University of Edinburgh examining how top-down knowledge about objects and scenes is built, retained and deployed, and how that process is disrupted in Alzheimer's disease.</p>
+    </div>
+
+    <div class="project" id="ateneo-medio">
+      <span class="tag">Ateneo Progetti Ricerca Medio · Sapienza · PI</span>
+      <h3>Uncovering the Attentional Curve of Forgetting in Healthy and Pathological Ageing</h3>
+      <p>Seed funding that established the attentional-forgetting paradigm later scaled up under PRIN 2022.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-note">© 2026 Moreno I. Coco · Department of Psychology, Sapienza University of Rome · <a href="privacy.html">Privacy</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

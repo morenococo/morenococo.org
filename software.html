@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Software &amp; Resources · Moreno I. Coco</title>
+<meta name="description" content="Open-source R packages (crqa, mousetrack), released datasets and code walk-throughs from published studies.">
+<link rel="canonical" href="https://www.morenococo.org/software.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Moreno I. Coco">
+<meta property="og:title" content="Software &amp; Resources · Moreno I. Coco">
+<meta property="og:description" content="Open-source R packages (crqa, mousetrack), released datasets and code walk-throughs from published studies.">
+<meta property="og:url" content="https://www.morenococo.org/software.html">
+<meta property="og:image" content="https://www.morenococo.org/assets/img/og-card.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Software &amp; Resources · Moreno I. Coco">
+<meta name="twitter:description" content="Open-source R packages (crqa, mousetrack), released datasets and code walk-throughs from published studies.">
+<meta name="twitter:image" content="https://www.morenococo.org/assets/img/og-card.jpg">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>document.documentElement.className+=" js";</script>
+<script defer data-domain="morenococo.org" src="https://plausible.io/js/script.outbound-links.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-name">Moreno I. Coco</span>
+      <span class="brand-title">Associate Professor of Computational Cognitive Science</span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="software.html" aria-current="page">Software</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow">Software &amp; Resources</span>
+    <h1>Sharing code and data</h1>
+    <p>Sharing codes and know-how is what really makes science move fast. Together with collaborators, I develop statistical software, mostly in R, to make similar analyses easier for other researchers, and I share data and materials from published studies for replication.</p>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <h2>R packages</h2>
+    <div class="software-grid">
+      <div class="card">
+        <span class="tag">R package</span>
+        <h3>crqa: Cross-Recurrence Quantification Analysis</h3>
+        <p>Cross-recurrence quantification analysis of two time-series, categorical or continuous. Provides diagonal-recurrence profiling as well as deeper measures of the whole cross-recurrence plot, such as recurrence rate. Introduced in Coco &amp; Dale (2014, <em>Frontiers in Psychology</em>) and extended in Coco et al. (2021, <em>The R-Journal</em>).</p>
+        <div class="pkg-links">
+          <a class="pill" href="https://cran.r-project.org/web/packages/crqa/index.html" target="_blank" rel="noopener">CRAN</a>
+          <a class="pill" href="https://www.rdocumentation.org/packages/crqa/versions/2.0.3" target="_blank" rel="noopener">Docs &amp; download stats</a>
+          <a class="pill" href="assets/data/crqa-alldata.rdata">Example data</a>
+          <a class="pill" href="walkthroughs/crqa-tutorial.html">Tutorial &amp; code walk-through</a>
+        </div>
+      </div>
+      <div class="card">
+        <span class="tag">R package</span>
+        <h3>mousetrack: Mouse-Tracking Measures from Trajectory Data</h3>
+        <p>Extracts dependent measures from two-dimensional x–y coordinates of an arm-reaching trajectory: area under the curve, latency to start the movement, x-flips and more, characterising the action-dynamics of a response. Built mainly for mouse-tracking experiments.</p>
+        <div class="pkg-links">
+          <a class="pill" href="https://cran.r-project.org/web/packages/mousetrack/index.html" target="_blank" rel="noopener">CRAN</a>
+          <a class="pill" href="https://www.rdocumentation.org/packages/mousetrack/versions/1.0.0" target="_blank" rel="noopener">Docs &amp; download stats</a>
+        </div>
+      </div>
+    </div>
+
+    <figure class="datafig datafig-wide" style="margin-top:1.8rem;">
+      <div class="frame">
+        <img src="assets/img/crqa-lorenz.gif" loading="lazy" alt="A three-panel animation. On the left, a state space reconstructed from a single signal by delay embedding, with the Lorenz attractor's two lobes visible and the current state's neighbours highlighted. Below it the raw signal with the delay taps marked, and a zoom inset showing the radius epsilon as a circle around the current state. On the right, a recurrence plot filling in over time, with the current column lit to show that each neighbour inside the radius becomes one dot.">
+      </div>
+      <figcaption><span class="dot">●</span> what a recurrence plot actually is: one signal, a state space rebuilt from it by delay embedding, and every return within radius ε becoming a dot. A demonstration of the method on the Lorenz system, not a data result · Coco, Mønster, Leonardi, Dale &amp; Wallot (2021), <em>The R-Journal</em></figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section reveal">
+  <div class="wrap">
+    <h2>Data &amp; materials</h2>
+    <p>Explaining and replicating are core principles of science. In the interest of sharing experimental data and methodology for broader interrogation, here is data and stimulus material from selected published studies.</p>
+
+    <div style="margin-top:1.8rem;">
+      <h3>VISIONS database</h3>
+      <p>165 indoor scenes in which the same location holds either a consistent or an inconsistent object, across left/right positions, normed for name agreement, conceptual and perceptual properties (clarity, confidence, prototypicality, familiarity, manipulability, visual complexity) and accompanied by free-viewing eye-tracking data. Allegretti, D'Innocenzo &amp; Coco, <em>Behavior Research Methods</em> (2025). <a href="https://doi.org/10.3758/s13428-024-02535-9" target="_blank" rel="noopener">DOI</a></p>
+    </div>
+
+    <div style="margin-top:1.8rem;">
+      <h3>Scan patterns predict sentence production</h3>
+      <p>Coco &amp; Keller, <em>Cognitive Science</em> 2012: responses across modalities are similarly coordinated by scan patterns. This paper was featured in <a href="http://www.newscientist.com/article/dn22093-where-you-look-predicts-what-youre-going-to-say.html" target="_blank" rel="noopener">New Scientist</a> and <a href="http://www.bbc.com/mundo/noticias/2012/07/120724_ojos_palabras_lp.shtml" target="_blank" rel="noopener">BBC Mundo</a>.</p>
+      <div class="pkg-links">
+        <a class="pill" href="assets/data/cogsci2012.zip">Download data</a>
+        <a class="pill" href="walkthroughs/cogsci-2012-scan-patterns.html">Code walk-through</a>
+      </div>
+    </div>
+
+    <div style="margin-top:1.8rem;">
+      <h3>Classification of visual and linguistic tasks using eye-movement features</h3>
+      <p>Coco &amp; Keller, <em>Journal of Vision</em>, 2014, 14(3):11. Eye-movement features can accurately classify the task from which responses were collected. <a href="https://doi.org/10.1167/14.3.11" target="_blank" rel="noopener">DOI</a></p>
+      <div class="pkg-links">
+        <a class="pill" href="assets/data/jov2014.zip">Download data</a>
+        <a class="pill" href="walkthroughs/jov-2014-task-classification.html">Code walk-through</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-note">© 2026 Moreno I. Coco · Department of Psychology, Sapienza University of Rome · <a href="privacy.html">Privacy</a></p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

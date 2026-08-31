@@ -1,0 +1,13 @@
+# old WordPress paths -> new pages
+/contact/*  /contact.html  301
+/contact  /contact.html  301
+/packages/*  /software.html  301
+/packages  /software.html  301
+/projects/*  /research.html  301
+/projects  /research.html  301
+/publications/*  /publications.html  301
+/publications  /publications.html  301
+/cv/*  /cv.html  301
+/cv  /cv.html  301
+/2022/02/14/publications/*  /publications.html  301
+/2022/02/14/publications  /publications.html  301
