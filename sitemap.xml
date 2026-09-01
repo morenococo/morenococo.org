@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.morenococo.org/</loc><lastmod>2026-08-31</lastmod><priority>1.0</priority></url>
-  <url><loc>https://www.morenococo.org/research.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.morenococo.org/publications.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.morenococo.org/people.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.morenococo.org/software.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.morenococo.org/cv.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.morenococo.org/contact.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
-  <url><loc>https://www.morenococo.org/privacy.html</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.morenococo.org/research</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.morenococo.org/publications</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.morenococo.org/people</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.morenococo.org/software</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.morenococo.org/cv</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.morenococo.org/contact</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.morenococo.org/privacy</loc><lastmod>2026-08-31</lastmod><priority>0.8</priority></url>
 </urlset>

@@ -1,13 +1,14 @@
-# old WordPress paths -> new pages
-/contact/*  /contact.html  301
-/contact  /contact.html  301
-/packages/*  /software.html  301
-/packages  /software.html  301
-/projects/*  /research.html  301
-/projects  /research.html  301
-/publications/*  /publications.html  301
-/publications  /publications.html  301
-/cv/*  /cv.html  301
-/cv  /cv.html  301
-/2022/02/14/publications/*  /publications.html  301
-/2022/02/14/publications  /publications.html  301
+# Old WordPress permalinks -> current pages.
+# Targets are extensionless: Cloudflare Pages serves /foo from foo.html and
+# 308-redirects /foo.html -> /foo. Pointing a rule at /foo.html therefore
+# creates an infinite 301/308 loop. Never add a .html target here.
+/packages/*        /software      301
+/packages          /software      301
+/projects/*        /research      301
+/projects          /research      301
+/2022/*            /publications  301
+
+# Trailing-slash forms of pages that kept their name.
+/contact/*         /contact       301
+/publications/*    /publications  301
+/cv/*              /cv            301

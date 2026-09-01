@@ -1,0 +1,7 @@
+# Cloudflare Pages parses these line by line; a stray CR breaks rule parsing.
+_redirects  text eol=lf
+_headers    text eol=lf
+*.html      text eol=lf
+*.css       text eol=lf
+*.js        text eol=lf
+*.xml       text eol=lf
