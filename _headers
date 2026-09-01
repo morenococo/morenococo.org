@@ -5,6 +5,21 @@
   Referrer-Policy: strict-origin-when-cross-origin
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: geolocation=(), microphone=(), camera=()
+  # The only inline script on these pages is the one-liner that sets the "js"
+  # class, allowlisted by hash. Adding another inline script means adding its
+  # hash here, or it will silently not run. Note that a hash in script-src
+  # makes browsers ignore 'unsafe-inline', so the two cannot be mixed.
+  # style-src needs 'unsafe-inline' for the handful of style="" attributes;
+  # hashes do not cover attributes. static.cloudflareinsights.com is the Web
+  # Analytics beacon, cloudflareinsights.com is where it reports.
+  # Cloudflare's email-obfuscation script is served from /cdn-cgi, so 'self'.
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'sha256-tHd4qJ0R/vQfI0CbRTiL3XGSi+Tun7VhOcDbx08aLKA=' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
+
+# The walkthroughs are self-contained knitr exports carrying vendored jQuery
+# and up to 16 inline <script> blocks, so they need 'unsafe-inline'. They load
+# nothing from any external host, hence no allowlisted origins at all.
+/walkthroughs/*
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests
 
 # Asset filenames are NOT content-hashed, so a long immutable cache would
 # strand viewers on an old image after a redeploy. One day is the compromise.
