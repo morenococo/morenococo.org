@@ -45,9 +45,21 @@
   X-Frame-Options: SAMEORIGIN
   Permissions-Policy: geolocation=(), microphone=(), camera=()
 
-# Asset filenames are NOT content-hashed, so a long immutable cache would
-# strand viewers on an old image after a redeploy. One day is the compromise.
-/assets/*
+# Asset filenames are NOT content-hashed, so a cached copy can only be
+# replaced by waiting out its max-age. That is fine for the media, which is
+# large and effectively immutable once published, but NOT for the CSS and JS:
+# a day of staleness there means a fix does not reach returning visitors, and
+# it also means the edge keeps serving the old file at its bare URL. So the
+# code is deliberately left to fall through to the Pages default
+# (max-age=0, must-revalidate), which revalidates and answers 304 when
+# unchanged. Do not add /assets/* back as a blanket rule.
+/assets/img/*
+  Cache-Control: public, max-age=86400
+
+/assets/data/*
+  Cache-Control: public, max-age=86400
+
+/assets/cv.pdf
   Cache-Control: public, max-age=86400
 
 /walkthroughs/*
