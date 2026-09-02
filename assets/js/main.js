@@ -48,3 +48,85 @@ document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('.pub-details summary a');
   if (a) { e.stopPropagation(); }
 });
+
+/* Click to enlarge the animations.
+ *
+ * Each .frame image is wrapped in a real <button> so it is reachable by
+ * keyboard and announced as a control; a div with a click handler would not
+ * be. The dialog is built once, on first use, and reused.
+ *
+ * <dialog> is what does the hard work: Escape to close, focus trapping and
+ * the inert backdrop are all native. If it is missing, we bind nothing and
+ * the figures stay exactly as they were.
+ */
+document.addEventListener('DOMContentLoaded', function () {
+  var frames = document.querySelectorAll('.frame > img');
+  if (!frames.length) return;
+  if (typeof HTMLDialogElement === 'undefined' ||
+      !HTMLDialogElement.prototype.showModal) return;
+
+  var dialog = null, dlgImg = null, dlgCap = null, opener = null;
+
+  function build() {
+    dialog = document.createElement('dialog');
+    dialog.className = 'lightbox';
+
+    var close = document.createElement('button');
+    close.type = 'button';
+    close.className = 'lightbox-close';
+    close.setAttribute('aria-label', 'Close');
+    close.textContent = '\u00d7';
+    close.addEventListener('click', function () { dialog.close(); });
+
+    var inner = document.createElement('div');
+    inner.className = 'lightbox-inner';
+
+    dlgImg = document.createElement('img');
+    dlgCap = document.createElement('p');
+    dlgCap.className = 'lightbox-cap';
+
+    inner.appendChild(dlgImg);
+    inner.appendChild(dlgCap);
+    dialog.appendChild(close);
+    dialog.appendChild(inner);
+    document.body.appendChild(dialog);
+
+    // Clicking the backdrop closes. The backdrop is not a separate element,
+    // so detect a click that landed on the dialog box itself rather than on
+    // any of its children.
+    dialog.addEventListener('click', function (e) {
+      if (e.target === dialog) dialog.close();
+    });
+
+    // Returning focus to the figure the reader came from keeps their place.
+    dialog.addEventListener('close', function () {
+      dlgImg.removeAttribute('src');
+      if (opener) { opener.focus(); opener = null; }
+    });
+  }
+
+  Array.prototype.forEach.call(frames, function (img) {
+    var frame = img.parentNode;
+    var figure = frame.closest ? frame.closest('figure') : null;
+    var cap = figure ? figure.querySelector('figcaption') : null;
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'frame-zoom';
+    btn.setAttribute('aria-label', 'Enlarge: ' + (img.alt || 'animation'));
+    frame.parentNode.insertBefore(btn, frame);
+    btn.appendChild(frame);
+
+    btn.addEventListener('click', function () {
+      if (!dialog) build();
+      // A lazy image below the fold may not have loaded yet; currentSrc is
+      // empty until it does, so fall back to the resolved src attribute.
+      dlgImg.src = img.currentSrc || img.src;
+      dlgImg.alt = img.alt || '';
+      if (cap) { dlgCap.innerHTML = cap.innerHTML; dlgCap.hidden = false; }
+      else { dlgCap.textContent = ''; dlgCap.hidden = true; }
+      opener = btn;
+      dialog.showModal();
+    });
+  });
+});
