@@ -67,6 +67,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var dialog = null, dlgImg = null, dlgCap = null, opener = null;
 
+  // Dropping the src frees the decoded frames of a multi-megabyte GIF and
+  // makes the next open restart the animation from its first frame.
+  // Returning focus to the figure the reader came from keeps their place.
+  function cleanup() {
+    if (dlgImg) dlgImg.removeAttribute('src');
+    if (opener) { opener.focus(); opener = null; }
+  }
+
+  function dismiss() {
+    cleanup();
+    if (dialog && dialog.open) dialog.close();
+  }
+
   function build() {
     dialog = document.createElement('dialog');
     dialog.className = 'lightbox';
@@ -76,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
     close.className = 'lightbox-close';
     close.setAttribute('aria-label', 'Close');
     close.textContent = '\u00d7';
-    close.addEventListener('click', function () { dialog.close(); });
+    close.addEventListener('click', function () { dismiss(); });
 
     var inner = document.createElement('div');
     inner.className = 'lightbox-inner';
@@ -95,14 +108,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // so detect a click that landed on the dialog box itself rather than on
     // any of its children.
     dialog.addEventListener('click', function (e) {
-      if (e.target === dialog) dialog.close();
+      if (e.target === dialog) dismiss();
     });
 
     // Returning focus to the figure the reader came from keeps their place.
-    dialog.addEventListener('close', function () {
-      dlgImg.removeAttribute('src');
-      if (opener) { opener.focus(); opener = null; }
-    });
+    // Escape fires 'cancel' then 'close'. Both are handled, and so is every
+    // explicit path, because cleanup must not depend on one event arriving:
+    // 'close' was observed not to fire under automation, and a reader who
+    // pressed Escape would then lose their place on the page. cleanup() is
+    // idempotent, so running it more than once is harmless.
+    dialog.addEventListener('cancel', cleanup);
+    dialog.addEventListener('close', cleanup);
   }
 
   Array.prototype.forEach.call(frames, function (img) {
