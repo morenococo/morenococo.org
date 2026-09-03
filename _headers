@@ -68,8 +68,11 @@
 /assets/data/*
   Cache-Control: public, max-age=86400
 
+# The CV is republished whenever a paper lands, and people are pointed at this
+# exact URL. A day of staleness would hand them the superseded version, so it
+# revalidates like the code rather than caching like the media.
 /assets/cv.pdf
-  Cache-Control: public, max-age=86400
+  Cache-Control: public, max-age=0, must-revalidate
 
 /walkthroughs/*
   Cache-Control: public, max-age=86400
